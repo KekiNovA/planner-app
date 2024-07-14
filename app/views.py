@@ -150,5 +150,4 @@ class PlannerAPIView(APIView):
             return Response({'errors': e.args[0]}, status=status.HTTP_401_UNAUTHORIZED)
 
         except Exception as e:
-            print(e)
             return Response({'error': 'Internal server error'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
